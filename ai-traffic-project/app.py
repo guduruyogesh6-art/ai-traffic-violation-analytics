@@ -314,12 +314,20 @@ elif menu == t["view_data"]:
     st.dataframe(violations, use_container_width=True)
 
 # ---------------- LIVE AI ---------------- #
+# ---------------- LIVE AI ---------------- #
 elif menu == t["live_ai_detection"]:
 
     st.title(t["live_title"])
 
-    st.warning("Click button to start camera (Press Q to stop)")
+    st.warning("Camera will open in browser (not OpenCV)")
 
-    if st.button(t["start_detection"]):
-        #from yolo_detection import run_detection
-        st.info("YOLO detection disabled in deployment version")
+    img = st.camera_input("📸 Capture Vehicle Image")
+
+    if img is not None:
+        st.image(img, caption="Captured Image")
+
+        # Dummy AI result (since YOLO is disabled)
+        st.success("🚦 Analysis Complete")
+
+        st.info("Vehicles detected: 2 (demo)")
+        st.info("Violation: None (demo)")
