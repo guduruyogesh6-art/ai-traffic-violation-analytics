@@ -321,5 +321,5 @@ elif menu == t["live_ai_detection"]:
     st.warning("Click button to start camera (Press Q to stop)")
 
     if st.button(t["start_detection"]):
-        from yolo_detection import run_detection
-        run_detection()
+        #from yolo_detection import run_detection
+        st.info("YOLO detection disabled in deployment version")
