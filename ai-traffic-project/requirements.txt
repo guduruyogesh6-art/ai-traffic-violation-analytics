@@ -3,4 +3,6 @@ pandas
 plotly
 numpy
 Pillow
-sqlite-utils
+ultralytics
+opencv-python
+torch
