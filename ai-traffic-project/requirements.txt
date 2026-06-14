@@ -3,6 +3,3 @@ pandas
 plotly
 numpy
 Pillow
-ultralytics
-opencv-python
-torch
