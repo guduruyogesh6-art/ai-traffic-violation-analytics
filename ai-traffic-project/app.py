@@ -314,20 +314,18 @@ elif menu == t["view_data"]:
     st.dataframe(violations, use_container_width=True)
 
 # ---------------- LIVE AI ---------------- #
-# ---------------- LIVE AI ---------------- #
 elif menu == t["live_ai_detection"]:
 
-    st.title(t["live_title"])
+    st.title("🚦 Real-Time CCTV AI Detection")
 
-    st.warning("Camera will open in browser (not OpenCV)")
+    st.warning("Use browser camera (works in cloud)")
 
-    img = st.camera_input("📸 Capture Vehicle Image")
+    img = st.camera_input("Capture Vehicle Image")
 
     if img is not None:
-        st.image(img, caption="Captured Image")
+        st.image(img)
 
-        # Dummy AI result (since YOLO is disabled)
-        st.success("🚦 Analysis Complete")
+        st.success("AI Analysis Running...")
 
         st.info("Vehicles detected: 2 (demo)")
-        st.info("Violation: None (demo)")
+        st.info("No violation detected (demo)")
